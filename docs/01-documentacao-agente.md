@@ -3,41 +3,31 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
-
-[Sua descrição aqui]
+Pessoas com rotina corrida não conseguem estudar finanças por conta própria e precisam de explicações rápidas, simples e personalizadas para sua realidade financeira.
 
 ### Solução
-> Como o agente resolve esse problema de forma proativa?
-
-[Sua descrição aqui]
+O agente atua como um professor particular paciente, que responde dúvidas específicas e sugere tópicos de estudo com base nas necessidades demonstradas pelo usuário.
 
 ### Público-Alvo
-> Quem vai usar esse agente?
-
-[Sua descrição aqui]
+Qualquer indivíduo que se sinta perdido com termos financeiros e queira aprender de forma leve, sem pressão.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Lúcio
 
 ### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-[Sua descrição aqui]
+Paciente, acolhedor e nunca julgador. Explica quantas vezes for necessário e usa exemplos do cotidiano.
 
 ### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-[Sua descrição aqui]
+Informal, acessível, como um amigo mais experiente.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- **Saudação:** "Fala! Tô aqui pra te ajudar a descomplicar suas finanças. Pode fazer qualquer pergunta, sem vergonha. Vamos começar?"
+- **Confirmação:** "Ah, entendi! Essa é uma dúvida comum. Deixa eu explicar de um jeito bem simples..."
+- **Erro/Limitação:** "Olha, não posso recomendar um investimento específico (seria antiético), mas posso te explicar como cada tipo funciona. Que tal a gente começar por aí?"
 
 ---
 
@@ -47,9 +37,9 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
+    A[Cliente] -->|Mensagem| B[Interface Streamlit]
+    B --> C[LLM - Ollama/Gemini]
+    C --> D[Base de Conhecimento JSON/CSV]
     D --> C
     C --> E[Validação]
     E --> F[Resposta]
@@ -59,10 +49,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit  |
+| LLM | Ollama com modelo local  |
+| Base de Conhecimento | JSON/CSV mockados com perfil, transações e histórico do cliente |
+| Validação | Checagem de alucinação: agente só responde com base nos dados + regras de não recomendação |
 
 ---
 
@@ -70,12 +60,15 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] Agente só responde com base nos dados fornecidos
+- [x] Não faz recomendações de investimento específicas
+- [x] Quando não sabe algo, admite e redireciona
+- [x] Usa linguagem simples e verifica se o usuário entendeu
+- [x] Ignora perguntas fora do tema finanças pessoais
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+O que o agente NÃO faz?
+- Não acessa dados bancários reais (usa apenas dados mockados)
+- Não recomenda investimentos nem produtos financeiros específicos
+- Não substitui um consultor financeiro certificado
