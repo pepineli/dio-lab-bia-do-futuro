@@ -1,42 +1,22 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "tipo": "Poupança",
+    "descricao": "A mais simples. Rendimento baixo, mas não perde dinheiro. Garantida pelo FGC até R$ 250 mil.",
+    "adequado_para": "Reserva de emergência"
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "tipo": "CDB",
+    "descricao": "Título de dívida do banco. Quanto maior o prazo, maior a rentabilidade. Risco baixo (garantido pelo FGC).",
+    "adequado_para": "Curto e médio prazo"
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "tipo": "Tesouro Direto (IPCA+)",
+    "descricao": "Título público que rende inflação + juros fixos. Protege contra perda de poder de compra. Indicado para longo prazo.",
+    "adequado_para": "Objetivos de longo prazo (aposentadoria, entrada de imóvel)"
   },
   {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
-  },
-  {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "tipo": "Fundos de investimento",
+    "descricao": "Cesta de ativos gerida por um profissional. Pode ter taxas de administração. Risco varia conforme o tipo de fundo.",
+    "adequado_para": "Quem não quer escolher ativos individualmente"
   }
 ]
