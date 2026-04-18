@@ -48,5 +48,4 @@ A integração é feita via Python, utilizando `json.load()` para os arquivos JS
 - 12/02: "Quanto devo guardar por mês para reserva?" → Resposta: guardar de 10% a 20% da renda.
 - 18/02: "Onde devo deixar minha reserva de emergência?" → Resposta: poupança ou CDB com liquidez diária.
 - 25/02: "E se eu precisar da reserva antes?" → Resposta: reserva é para ser usada em emergências.
-...
 ```
