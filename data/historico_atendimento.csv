@@ -1,6 +1,4 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+data,pergunta,resposta
+2025-02-12,"Quanto devo guardar por mês para reserva?","O ideal é guardar de 10% a 20% da sua renda mensal. No seu caso, com renda variável, tente guardar um valor fixo quando receber."
+2025-02-18,"Onde devo deixar minha reserva de emergência?","Em um lugar de fácil acesso, como poupança ou CDB com liquidez diária. O importante é não misturar com investimentos de longo prazo."
+2025-02-25,"E se eu precisar da reserva antes?","Sem problemas! A reserva é feita para ser usada em emergências. O importante é repor depois."
