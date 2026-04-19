@@ -1,149 +1,137 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 Lúcio – Agente Educador Financeiro com IA Generativa
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, desenvolvemos o **Lúcio**, um agente educador financeiro que utiliza IA Generativa para:
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+- **Ensinar conceitos** de finanças pessoais de forma simples e personalizada
+- **Usar dados do cliente** (mockados) para criar exemplos práticos
+- **Garantir segurança** e evitar recomendações inadequadas (anti-alucinação)
+- **Manter tom acolhedor** e nunca julgar as dúvidas do usuário
 
 ---
 
-## O Que Você Deve Entregar
+## O Que Foi Entregue
 
 ### 1. Documentação do Agente
 
-Defina **o que** seu agente faz e **como** ele funciona:
+Definimos o **Lúcio**, um educador financeiro paciente e informal, que ensina sobre reserva de emergência, orçamento e produtos financeiros sem recomendar investimentos.
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+- **Caso de Uso:** Educação financeira para pessoas com renda variável (ex: Mariana, nossa cliente mockada)
+- **Persona e Tom de Voz:** Acolhedor, informal, como um amigo mais experiente
+- **Arquitetura:** Streamlit + Ollama (ou API Gemini) + base de conhecimento JSON/CSV
+- **Segurança:** Regras rígidas contra alucinação e proibição de recomendações
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+📄 **Arquivo:** `docs/01-documentacao-agente.md`
 
 ---
 
 ### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Adaptamos os dados mockados para o perfil da **Mariana Costa** (29 anos, renda variável, objetivo: reserva de emergência). Os arquivos estão prontos para alimentar o agente:
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| `transacoes.csv` | CSV | Últimas 12 transações (receitas e despesas) |
+| `historico_atendimento.csv` | CSV | 3 interações anteriores sobre reserva de emergência |
+| `perfil_investidor.json` | JSON | Perfil moderado, patrimônio R$ 12k, reserva atual R$ 3,5k |
+| `produtos_financeiros.json` | JSON | Descrições educativas de poupança, CDB, Tesouro Direto e fundos |
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+📄 **Documentação:** `docs/02-base-conhecimento.md`
 
 ---
 
 ### 3. Prompts do Agente
 
-Documente os prompts que definem o comportamento do seu agente:
+Documentamos o **system prompt** com regras rígidas de segurança, exemplos de interação (educacional, limitação, edge cases) e estratégias para evitar alucinações.
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+📄 **Arquivo:** `docs/03-prompts.md`
 
 ---
 
-### 4. Aplicação Funcional
+### 4. Aplicação Funcional (em desenvolvimento)
 
-Desenvolva um **protótipo funcional** do seu agente:
+O código fonte do agente está sendo implementado na pasta `src/`.  
+Tecnologias sugeridas: Streamlit, Ollama (local) ou API Gemini, e integração com os dados mockados.
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
+📁 **Pasta:** `src/`
 
 ---
 
 ### 5. Avaliação e Métricas
 
-Descreva como você avalia a qualidade do seu agente:
+Definimos métricas de **assertividade, segurança e coerência**, além de um plano de testes com cenários reais (consulta de gastos, recomendação proibida, perguntas fora do escopo).
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+📄 **Arquivo:** `docs/04-metricas.md`
 
 ---
 
 ### 6. Pitch
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+Roteiro de 3 minutos apresentando o problema (falta de personalização na educação financeira), a solução (Lúcio com dados mockados), a demonstração (três interações) e o diferencial (cuidado com o usuário e redução da ansiedade financeira).
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+📄 **Arquivo:** `docs/05-pitch.md`
 
 ---
 
-## Ferramentas Sugeridas
+## Status do Projeto
 
-Todas as ferramentas abaixo possuem versões gratuitas:
+✅ **Documentação concluída** (todas as seções `docs/` preenchidas)  
+✅ **Base de conhecimento definida** (arquivos `data/` adaptados)  
+🔄 **Implementação do código** em andamento (pasta `src/` em breve)  
+⏳ **Pitch** a ser gravado e anexado
+
+---
+
+## Ferramentas Utilizadas (previstas)
 
 | Categoria | Ferramentas |
 |-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+| **LLMs** | Ollama (local) ou API Gemini |
+| **Desenvolvimento** | Streamlit, Python, Google Colab |
+| **Dados** | JSON, CSV |
+| **Diagramas** | Mermaid |
 
 ---
 
 ## Estrutura do Repositório
-
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
-```
+📁 dio-lab-bia-do-futuro/  
+│  
+├── 📄 README.md  
+│  
+├── 📁 data/ # Dados mockados (Mariana Costa)  
+│ ├── historico_atendimento.csv  
+│ ├── perfil_investidor.json  
+│ ├── produtos_financeiros.json  
+│ └── transacoes.csv  
+│  
+├── 📁 docs/ # Documentação completa  
+│ ├── 01-documentacao-agente.md  
+│ ├── 02-base-conhecimento.md  
+│ ├── 03-prompts.md  
+│ ├── 04-metricas.md  
+│ └── 05-pitch.md  
+│  
+├── 📁 src/ # Código (em desenvolvimento)  
+│ └── app.py  
+│  
+└── 📁 assets/ # Imagens e diagramas (opcional)  
 
 ---
 
-## Dicas Finais
+## Como Executar (assim que o código estiver pronto)
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+1. Clone o repositório  
+2. Instale as dependências: `pip install -r requirements.txt`  
+3. Execute o agente: `streamlit run src/app.py`
+
+---
+
+## Licença
+
+Projeto educacional desenvolvido para o **Bootcamp Bradesco GenAI & Dados** da DIO.
+
+---
+
+**Desenvolvido por Murilo Pepineli**  
+[GitHub](https://github.com/pepineli) | [LinkedIn](https://linkedin.com/in/pepineli)
