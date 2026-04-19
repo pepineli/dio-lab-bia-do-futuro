@@ -88,19 +88,3 @@ Roteiro de 3 minutos para apresentação do agente.
 
 ---
 
-## 🛠️ Como Executar o Agente (duas formas)
-
-### ▶️ Opção 1 – Google Colab (recomendada, já funcional)
-
-1. Acesse o notebook pelo link do Colab (acima).
-2. Execute as células na ordem.
-3. Quando solicitado, digite sua **chave da API OpenAI** (ela não fica salva).
-4. O link público do Gradio será gerado – converse com o Lúcio.
-
-### ▶️ Opção 2 – Local (Streamlit – requer configuração adicional)
-
-```bash
-git clone https://github.com/pepineli/dio-lab-bia-do-futuro.git
-cd dio-lab-bia-do-futuro
-pip install -r requirements.txt
-streamlit run src/app.py
