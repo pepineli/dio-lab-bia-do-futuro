@@ -1,8 +1,8 @@
-# Lúcio – Agente Educador Financeiro com IA Generativa
+#  Lúcio – Agente Educador Financeiro com IA Generativa
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, desenvolvemos o **Lúcio**, um agente educador financeiro que utiliza IA Generativa para:
+Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, foi desenvolvido o **Lúcio**, um agente educador financeiro que utiliza IA Generativa para:
 
 - **Ensinar conceitos** de finanças pessoais de forma simples e personalizada
 - **Usar dados do cliente** (mockados) para criar exemplos práticos
@@ -13,14 +13,16 @@ Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots
 
 ## Aplicação Funcional (Google Colab)
 
-O agente **Lúcio** está disponível e funcionando diretamente no Google Colab, com interface interativa via **Gradio**.
+O agente **Lúcio** está disponível e funcionando diretamente no Google Colab, com interface interativa via **Gradio**. Basta executar o notebook e fornecer sua chave da OpenAI (a chave **não fica salva** no código).
 
-🔗 **Acesse o notebook funcional:**  
-[`lucio_agente_educador.ipynb`](./lucio_agente_educador.ipynb) (dentro do repositório)  
-ou  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pepineli/dio-lab-bia-do-futuro/blob/main/lucio_agente_educador.ipynb)
+🔗 **Acesse o notebook funcional no repositório:**  
+`Agente_de_IA_financeiro_LÚCIO (1).ipynb`
 
-> **Nota:** Ao executar, o notebook solicitará sua chave da OpenAI via `getpass`. A chave **não fica salva** no código, garantindo segurança.
+ou diretamente no botão abaixo:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pepineli/dio-lab-bia-do-futuro/blob/main/Agente_de_IA_financeiro_L%C3%9ACIO%20(1).ipynb)
+
+> **Nota:** Ao executar, o notebook solicitará sua chave da OpenAI via `getpass`. A chave **não fica salva** no código, garantindo segurança. Você precisa ter créditos na OpenAI (mínimo US$ 5).
 
 ---
 
@@ -33,7 +35,7 @@ ou
 - **Arquitetura:** Google Colab + Gradio + API OpenAI (GPT-3.5-turbo)
 - **Segurança:** Regras rígidas contra alucinação e proibição de recomendações
 
-📄 [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+📄 `docs/01-documentacao-agente.md`
 
 ### 2. Base de Conhecimento
 
@@ -46,33 +48,33 @@ Dados mockados da cliente **Mariana Costa** (renda variável, objetivo: reserva 
 | `perfil_investidor.json` | JSON | Perfil moderado, patrimônio R$ 12k |
 | `produtos_financeiros.json` | JSON | Descrições educativas de produtos |
 
-📄 [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+📄 `docs/02-base-conhecimento.md`
 
 ### 3. Prompts do Agente
 
 System prompt com regras de segurança, exemplos de interação e tratamento de edge cases.
 
-📄 [`docs/03-prompts.md`](./docs/03-prompts.md)
+📄 `docs/03-prompts.md`
 
 ### 4. Código Funcional
 
-- Notebook Colab com interface Gradio (`lucio_agente_educador.ipynb`)
-- Código local para Streamlit (pasta `src/` – opcional)
+- Notebook Colab com interface Gradio (arquivo principal)
+- Código alternativo para Streamlit (pasta `src/` – não mantido ativamente)
 
-📁 [`lucio_agente_educador.ipynb`](./lucio_agente_educador.ipynb)  
-📁 [`src/app.py`](./src/app.py)
+📁 `Agente_de_IA_financeiro_LÚCIO (1).ipynb`  
+📁 `src/` (código legado)
 
 ### 5. Avaliação e Métricas
 
 Métricas de assertividade, segurança, coerência e plano de testes.
 
-📄 [`docs/04-metricas.md`](./docs/04-metricas.md)
+📄 `docs/04-metricas.md`
 
 ### 6. Pitch
 
 Roteiro de 3 minutos para apresentação do agente.
 
-📄 [`docs/05-pitch.md`](./docs/05-pitch.md)
+📄 `docs/05-pitch.md`
 
 ---
 
@@ -88,3 +90,52 @@ Roteiro de 3 minutos para apresentação do agente.
 
 ---
 
+> ⚠️ O agente **não funciona localmente com Streamlit** devido a limitações de memória no computador. Portanto foi realizada no colab.
+---
+
+##  Segurança e Privacidade
+
+- **Nenhuma chave de API** está exposta nos arquivos do repositório.
+- O notebook Colab utiliza `getpass` para ler a chave em tempo real.
+- Os dados são **mockados** (fictícios) – não há informações sensíveis reais.
+
+---
+
+##  Estrutura do Repositório
+dio-lab-bia-do-futuro/  
+├── README.md  
+├── Agente_de_IA_financeiro_LÚCIO (1).ipynb # Notebook funcional  
+├── data/ # Dados mockados  
+│ ├── historico_atendimento.csv  
+│ ├── perfil_investidor.json  
+│ ├── produtos_financeiros.json  
+│ └── transacoes.csv  
+├── docs/ # Documentação completa  
+│ ├── 01-documentacao-agente.md  
+│ ├── 02-base-conhecimento.md  
+│ ├── 03-prompts.md  
+│ ├── 04-metricas.md  
+│ └── 05-pitch.md  
+├── src/ # Código alternativo (não mantido)  
+│ └── app.py  
+└── assets/ # (opcional) Imagens do projeto  
+
+---
+
+##  Agradecimentos
+
+- **DIO** pelo bootcamp e desafio
+- **Bradesco** pela oportunidade
+- **OpenAI** pela API do ChatGPT
+- **Gradio** pela interface interativa
+
+---
+
+## 📄 Licença
+
+Projeto educacional desenvolvido para o **Bootcamp Bradesco GenAI & Dados** da DIO.
+
+---
+
+**Desenvolvido por Murilo Pepineli**  
+[GitHub](https://github.com/pepineli) | [LinkedIn](https://linkedin.com/in/pepineli)
