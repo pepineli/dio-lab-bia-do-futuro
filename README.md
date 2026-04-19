@@ -1,4 +1,4 @@
-# Lúcio – Agente Educador Financeiro com IA Generativa
+# 🤖 Lúcio – Agente Educador Financeiro com IA Generativa
 
 ## Contexto
 
@@ -11,127 +11,96 @@ Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots
 
 ---
 
-## O Que Foi Entregue
+## 🚀 Aplicação Funcional (Google Colab)
+
+O agente **Lúcio** está disponível e funcionando diretamente no Google Colab, com interface interativa via **Gradio**.
+
+🔗 **Acesse o notebook funcional:**  
+[`lucio_agente_educador.ipynb`](./lucio_agente_educador.ipynb) (dentro do repositório)  
+ou  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pepineli/dio-lab-bia-do-futuro/blob/main/lucio_agente_educador.ipynb)
+
+> **Nota:** Ao executar, o notebook solicitará sua chave da OpenAI via `getpass`. A chave **não fica salva** no código, garantindo segurança.
+
+---
+
+## 📦 O Que Foi Entregue
 
 ### 1. Documentação do Agente
 
-Definimos o **Lúcio**, um educador financeiro paciente e informal, que ensina sobre reserva de emergência, orçamento e produtos financeiros sem recomendar investimentos.
-
-- **Caso de Uso:** Educação financeira para pessoas com renda variável (ex: Mariana, nossa cliente mockada)
-- **Persona e Tom de Voz:** Acolhedor, informal, como um amigo mais experiente
-- **Arquitetura:** Streamlit + Ollama (ou API Gemini) + base de conhecimento JSON/CSV
+- **Caso de Uso:** Educação financeira para pessoas com renda variável (cliente mockada Mariana)
+- **Persona e Tom de Voz:** Lúcio – paciente, acolhedor, informal
+- **Arquitetura:** Google Colab + Gradio + API OpenAI (GPT-3.5-turbo)
 - **Segurança:** Regras rígidas contra alucinação e proibição de recomendações
 
-📄 **Arquivo:** `docs/01-documentacao-agente.md`
-
----
+📄 [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
 ### 2. Base de Conhecimento
 
-Adaptamos os dados mockados para o perfil da **Mariana Costa** (29 anos, renda variável, objetivo: reserva de emergência). Os arquivos estão prontos para alimentar o agente:
+Dados mockados da cliente **Mariana Costa** (renda variável, objetivo: reserva de emergência).
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Últimas 12 transações (receitas e despesas) |
-| `historico_atendimento.csv` | CSV | 3 interações anteriores sobre reserva de emergência |
-| `perfil_investidor.json` | JSON | Perfil moderado, patrimônio R$ 12k, reserva atual R$ 3,5k |
-| `produtos_financeiros.json` | JSON | Descrições educativas de poupança, CDB, Tesouro Direto e fundos |
+| `transacoes.csv` | CSV | Últimas 12 transações |
+| `historico_atendimento.csv` | CSV | 3 interações anteriores |
+| `perfil_investidor.json` | JSON | Perfil moderado, patrimônio R$ 12k |
+| `produtos_financeiros.json` | JSON | Descrições educativas de produtos |
 
-📄 **Documentação:** `docs/02-base-conhecimento.md`
-
----
+📄 [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
 ### 3. Prompts do Agente
 
-Documentamos o **system prompt** com regras rígidas de segurança, exemplos de interação (educacional, limitação, edge cases) e estratégias para evitar alucinações.
+System prompt com regras de segurança, exemplos de interação e tratamento de edge cases.
 
-📄 **Arquivo:** `docs/03-prompts.md`
+📄 [`docs/03-prompts.md`](./docs/03-prompts.md)
 
----
+### 4. Código Funcional
 
-### 4. Aplicação Funcional (em desenvolvimento)
+- Notebook Colab com interface Gradio (`lucio_agente_educador.ipynb`)
+- Código local para Streamlit (pasta `src/` – opcional)
 
-O código fonte do agente está sendo implementado na pasta `src/`.  
-Tecnologias sugeridas: Streamlit, Ollama (local) ou API Gemini, e integração com os dados mockados.
-
-📁 **Pasta:** `src/`
-
----
+📁 [`lucio_agente_educador.ipynb`](./lucio_agente_educador.ipynb)  
+📁 [`src/app.py`](./src/app.py)
 
 ### 5. Avaliação e Métricas
 
-Definimos métricas de **assertividade, segurança e coerência**, além de um plano de testes com cenários reais (consulta de gastos, recomendação proibida, perguntas fora do escopo).
+Métricas de assertividade, segurança, coerência e plano de testes.
 
-📄 **Arquivo:** `docs/04-metricas.md`
-
----
+📄 [`docs/04-metricas.md`](./docs/04-metricas.md)
 
 ### 6. Pitch
 
-Roteiro de 3 minutos apresentando o problema (falta de personalização na educação financeira), a solução (Lúcio com dados mockados), a demonstração (três interações) e o diferencial (cuidado com o usuário e redução da ansiedade financeira).
+Roteiro de 3 minutos para apresentação do agente.
 
-📄 **Arquivo:** `docs/05-pitch.md`
-
----
-
-## Status do Projeto
-
-✅ **Documentação concluída** (todas as seções `docs/` preenchidas)  
-✅ **Base de conhecimento definida** (arquivos `data/` adaptados)  
-🔄 **Implementação do código** em andamento (pasta `src/` em breve)  
-⏳ **Pitch** a ser gravado e anexado
+📄 [`docs/05-pitch.md`](./docs/05-pitch.md)
 
 ---
 
-## Ferramentas Utilizadas (previstas)
+## 📊 Status do Projeto
 
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | Ollama (local) ou API Gemini |
-| **Desenvolvimento** | Streamlit, Python, Google Colab |
-| **Dados** | JSON, CSV |
-| **Diagramas** | Mermaid |
-
----
-
-## Estrutura do Repositório
-📁 dio-lab-bia-do-futuro/  
-│  
-├── 📄 README.md  
-│  
-├── 📁 data/ # Dados mockados (Mariana Costa)  
-│ ├── historico_atendimento.csv  
-│ ├── perfil_investidor.json  
-│ ├── produtos_financeiros.json  
-│ └── transacoes.csv  
-│  
-├── 📁 docs/ # Documentação completa  
-│ ├── 01-documentacao-agente.md  
-│ ├── 02-base-conhecimento.md  
-│ ├── 03-prompts.md  
-│ ├── 04-metricas.md  
-│ └── 05-pitch.md  
-│  
-├── 📁 src/ # Código (em desenvolvimento)  
-│ └── app.py  
-│  
-└── 📁 assets/ # Imagens e diagramas (opcional)  
+| Etapa | Status |
+|-------|--------|
+| Documentação (`docs/`) | ✅ Concluída |
+| Base de conhecimento (`data/`) | ✅ Concluída |
+| Código funcional (Colab + Gradio) | ✅ Concluído |
+| README e estrutura do repositório | ✅ Concluído |
+| Segurança (chave não exposta) | ✅ Garantida |
 
 ---
 
-## Como Executar (assim que o código estiver pronto)
+## 🛠️ Como Executar o Agente (duas formas)
 
-1. Clone o repositório  
-2. Instale as dependências: `pip install -r requirements.txt`  
-3. Execute o agente: `streamlit run src/app.py`
+### ▶️ Opção 1 – Google Colab (recomendada, já funcional)
 
----
+1. Acesse o notebook pelo link do Colab (acima).
+2. Execute as células na ordem.
+3. Quando solicitado, digite sua **chave da API OpenAI** (ela não fica salva).
+4. O link público do Gradio será gerado – converse com o Lúcio.
 
-## Licença
+### ▶️ Opção 2 – Local (Streamlit – requer configuração adicional)
 
-Projeto educacional desenvolvido para o **Bootcamp Bradesco GenAI & Dados** da DIO.
-
----
-
-**Desenvolvido por Murilo Pepineli**  
-[GitHub](https://github.com/pepineli) | [LinkedIn](https://linkedin.com/in/pepineli)
+```bash
+git clone https://github.com/pepineli/dio-lab-bia-do-futuro.git
+cd dio-lab-bia-do-futuro
+pip install -r requirements.txt
+streamlit run src/app.py
