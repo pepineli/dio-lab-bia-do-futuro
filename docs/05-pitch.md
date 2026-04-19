@@ -1,7 +1,7 @@
 # Pitch (3 minutos)
 
 
-## Roteiro Sugerido
+## Roteiro 
 
 ### 1. O Problema (30 seg)
 
