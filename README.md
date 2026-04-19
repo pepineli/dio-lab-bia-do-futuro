@@ -1,4 +1,4 @@
-# 🤖 Lúcio – Agente Educador Financeiro com IA Generativa
+# Lúcio – Agente Educador Financeiro com IA Generativa
 
 ## Contexto
 
