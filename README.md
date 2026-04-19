@@ -1,4 +1,4 @@
-# 🤖 Lúcio – Agente Educador Financeiro com IA Generativa
+# Lúcio – Agente Educador Financeiro com IA Generativa
 
 ## Contexto
 
@@ -11,7 +11,7 @@ Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots
 
 ---
 
-## 🚀 Aplicação Funcional (Google Colab)
+## Aplicação Funcional (Google Colab)
 
 O agente **Lúcio** está disponível e funcionando diretamente no Google Colab, com interface interativa via **Gradio**.
 
@@ -24,7 +24,7 @@ ou
 
 ---
 
-## 📦 O Que Foi Entregue
+##  O Que Foi Entregue
 
 ### 1. Documentação do Agente
 
@@ -76,7 +76,7 @@ Roteiro de 3 minutos para apresentação do agente.
 
 ---
 
-## 📊 Status do Projeto
+## Status do Projeto
 
 | Etapa | Status |
 |-------|--------|
