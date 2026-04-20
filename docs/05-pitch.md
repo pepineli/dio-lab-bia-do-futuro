@@ -27,4 +27,4 @@ O maior diferencial do Lúcio é o cuidado com o usuário. Ele foi desenhado par
 
 ## Link do Vídeo
 
-[Link do vídeo]
+[https://www.loom.com/share/da3d4332e298442a84377a1ecc2f370d]
