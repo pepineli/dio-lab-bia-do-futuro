@@ -101,27 +101,6 @@ Roteiro de 3 minutos para apresentação do agente.
 
 ---
 
-##  Estrutura do Repositório
-dio-lab-bia-do-futuro/  
-├── README.md  
-├── Agente_de_IA_financeiro_LÚCIO (1).ipynb # Notebook funcional  
-├── data/ # Dados mockados  
-│ ├── historico_atendimento.csv  
-│ ├── perfil_investidor.json  
-│ ├── produtos_financeiros.json  
-│ └── transacoes.csv  
-├── docs/ # Documentação completa  
-│ ├── 01-documentacao-agente.md  
-│ ├── 02-base-conhecimento.md  
-│ ├── 03-prompts.md  
-│ ├── 04-metricas.md  
-│ └── 05-pitch.md  
-├── src/ # Código alternativo (não mantido)  
-│ └── app.py  
-└── assets/ # (opcional) Imagens do projeto  
-
----
-
 ##  Agradecimentos
 
 - **DIO** pelo bootcamp e desafio
